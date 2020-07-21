@@ -1,0 +1,33 @@
+.Banner{
+    .banner {
+        background-image: url('../../assets/background.jpg');
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        height: 50vh;
+        position: relative;
+    }
+    
+    .logo {
+        background-image: url('../../assets/logo.jpg');
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 350px;
+        height: 30vh;
+        margin: 0 auto;
+    }
+
+    .tagline {
+        text-align: center;
+        position: absolute;
+        bottom: 0;
+        color: #fff;
+        padding: 25px;
+        width: 100%;
+        background: rgba(0,0,0,.25);
+        font-weight: 600;
+        margin: 0;
+        font-size: 14pt;
+    }
+}
