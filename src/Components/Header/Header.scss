@@ -1,11 +1,53 @@
-.Banner{
-    .banner {
-        background-image: url('../../assets/background.jpg');
-        background-position: center;
-        background-size: cover;
+.Header{
+    background-image: url('../../assets/background.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    height: 60vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .nav {
+        position: fixed;
+        top: 0px;
         width: 100%;
-        height: 50vh;
-        position: relative;
+        padding: 20px 0px;
+        display: block;
+
+        ul {
+            list-style-type: none;
+            margin-bottom: 0px;
+            padding-left: 0px;
+            float: right;
+            margin-right: 20px;
+
+            li {
+                float: left;
+                color: #fff;
+                padding: 0 15px;
+                font-weight: 300;
+                font-size: 16px;
+                cursor: pointer;
+
+                a {
+                    color: inherit !important;
+                    text-decoration: none !important;
+                }
+            }
+        }
+    }
+
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,.4);
     }
     
     .logo {
@@ -13,9 +55,9 @@
         background-position: center;
         background-size: contain;
         background-repeat: no-repeat;
-        width: 350px;
+        width: 400px;
         height: 30vh;
-        margin: 0 auto;
+        z-index: 10;
     }
 
     .tagline {
@@ -23,11 +65,11 @@
         position: absolute;
         bottom: 0;
         color: #fff;
-        padding: 25px;
+        padding: 1.5rem;
         width: 100%;
-        background: rgba(0,0,0,.25);
+        background: rgba(0, 0, 0, 0.15);
         font-weight: 600;
         margin: 0;
-        font-size: 14pt;
+        font-size: 15pt;
     }
 }

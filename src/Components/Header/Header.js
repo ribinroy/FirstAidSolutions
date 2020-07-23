@@ -1,18 +1,24 @@
 import React, { Component } from 'react'
 import { Row, Col } from 'react-bootstrap'
-import Banner from './Banner/Banner'
-import Navbar from './Navbar/Navbar'
 import './Header.scss'
 
 export class Header extends Component {
     render() {
         return (
-            <Row>
-                <Col>
-                    <Navbar></Navbar>
-                    <Banner tagline={ this.props.tagline }></Banner>
-                </Col>                        
-            </Row>
+            <div className="Header">                
+                <div className="nav">
+                    <ul>
+                        <li><a href="/Home">Home</a></li>
+                        <li>About Us</li>
+                        <li>Catalog</li>
+                        <li><a href="/Client">Clients</a></li>
+                        <li>News</li>
+                        <li>Contact</li>
+                    </ul>
+                </div>
+                <div className="logo"></div>
+                <h3 className="tagline">{ this.props.tagline }</h3>
+            </div>
         )
     }
 }

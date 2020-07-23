@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import "./Client.scss"
 import Header from '../Header/Header'
+import ClientInfo from './ClientInfo'
 import Footer from '../Footer/Footer'
 
 export class Client extends Component {
@@ -8,7 +9,7 @@ export class Client extends Component {
         return (
             <div className="Client">
                 <Header tagline="We are proud to have many satisfied clients. Here's what some of them have to say: "/>
-                Client
+                <ClientInfo />
                 <Footer/>
             </div>
         )
