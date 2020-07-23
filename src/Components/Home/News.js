@@ -1,14 +1,14 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { Row, Col } from 'react-bootstrap'
 
 import "./Home.scss"
 
-export class News extends Component {
-    render() {
-        return (
-            <div className="News">
+export default function News() {
+    return (
+        <div className="News">
+            <Col md={12}>
                 <Row>
-                    <Col md={5}>
+                    <Col md={5} className="noPadding">
                         <div className="image"></div>
                     </Col>
                     <Col md={7}>
@@ -18,9 +18,8 @@ export class News extends Component {
                         </div>                        
                     </Col>
                 </Row>
-            </div>
-        )
-    }
+            </Col>
+        </div>
+    )
 }
 
-export default News

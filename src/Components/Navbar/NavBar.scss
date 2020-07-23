@@ -1,0 +1,118 @@
+.NavBarWrap {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    padding: 20px 0px;
+    display: block;
+    z-index: 9999;
+    transition: background .4s;
+
+    &[scrolleddown="true"]{
+        background: #212121;
+    }
+
+    .hamburger {
+        display: none;
+        width: 20px;
+        margin: 15px;
+        color: #fff;
+        position: relative;
+        z-index: 1;
+        -webkit-user-select: none;
+        user-select: none;
+
+        &.isSelected{
+            span {
+                opacity: 1;
+                transform: rotate(45deg) translate(-9px, -19px);
+    
+                &:nth-last-child(3) {
+                    opacity: 0;
+                    transform: rotate(0deg) scale(0.2, 0.2);
+                }
+    
+                &:nth-last-child(2) {
+                    transform: rotate(-45deg) translate(0, 12px);
+                }
+                
+            }
+        }
+
+        span {
+            display: block;
+            width: 33px;
+            height: 4px;
+            margin-bottom: 5px;
+            position: relative;
+            background: #cdcdcd;
+            border-radius: 3px;
+            z-index: 1;
+            transform-origin: 4px 0px;
+            transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), opacity 0.55s ease;
+            
+            &:first-child {
+                transform-origin: 0% 0%;
+            }
+    
+            &:nth-last-child(2) {
+                transform-origin: 0% 100%;
+            }
+        }
+    
+    }
+
+    ul.listItems {
+        list-style-type: none;
+        margin-bottom: 0px;
+        padding-left: 0px;
+        float: right;
+        margin-right: 20px;
+
+        li {
+            float: left;
+            color: #fff;
+            padding: 0 15px;
+            font-weight: 300;
+            font-size: 16px;
+            cursor: pointer;
+
+            a {
+                color: inherit !important;
+                text-decoration: none !important;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .NavBarWrap{
+        padding: 0px;
+
+        .listItems{
+            display: none;
+        }
+    
+        .hamburger{
+            display: block !important;
+        }
+    }
+}
+
+.overLayDiv {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #00000094;
+    z-index: 10;
+    animation: fadeIn .4s 1;
+    top: 0;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}

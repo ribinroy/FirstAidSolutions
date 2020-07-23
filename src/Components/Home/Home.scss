@@ -76,3 +76,13 @@
     }
 
 }
+
+@media only screen and (max-width: 768px) {
+    .Home {
+        .row{
+            width: 100%;
+            text-align: center;
+            padding: 0px 10px;
+        }
+    }
+}

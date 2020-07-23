@@ -10,36 +10,6 @@
     justify-content: center;
     align-items: center;
 
-    .nav {
-        position: fixed;
-        top: 0px;
-        width: 100%;
-        padding: 20px 0px;
-        display: block;
-
-        ul {
-            list-style-type: none;
-            margin-bottom: 0px;
-            padding-left: 0px;
-            float: right;
-            margin-right: 20px;
-
-            li {
-                float: left;
-                color: #fff;
-                padding: 0 15px;
-                font-weight: 300;
-                font-size: 16px;
-                cursor: pointer;
-
-                a {
-                    color: inherit !important;
-                    text-decoration: none !important;
-                }
-            }
-        }
-    }
-
     &:before {
         content: "";
         position: absolute;

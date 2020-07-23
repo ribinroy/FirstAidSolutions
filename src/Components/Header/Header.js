@@ -1,26 +1,35 @@
-import React, { Component } from 'react'
-import { Row, Col } from 'react-bootstrap'
+import React, { useEffect, useState } from 'react'
 import './Header.scss'
+import NavBar from "../Navbar/NavBar";
 
-export class Header extends Component {
-    render() {
-        return (
-            <div className="Header">                
-                <div className="nav">
-                    <ul>
-                        <li><a href="/Home">Home</a></li>
-                        <li>About Us</li>
-                        <li>Catalog</li>
-                        <li><a href="/Client">Clients</a></li>
-                        <li>News</li>
-                        <li>Contact</li>
-                    </ul>
-                </div>
-                <div className="logo"></div>
-                <h3 className="tagline">{ this.props.tagline }</h3>
-            </div>
-        )
+
+export default function Header(props) {
+    function positionHeader(){
+        var navBarWrap = document.getElementsByClassName("NavBarWrap")[0];
+        if(!navBarWrap)
+            return false;
+            
+        if(window.pageYOffset === 0){//at top
+            navBarWrap.setAttribute("scrolledDown", "false");
+        }
+        else{
+            navBarWrap.setAttribute("scrolledDown", "true");
+        }
+
+        setbgPosY((window.pageYOffset/window.outerHeight)*100);
     }
-}
 
-export default Header
+    useEffect(() => {
+        positionHeader();
+        window.addEventListener('scroll', positionHeader);
+    })
+    const [bgPosY, setbgPosY] = useState((window.pageYOffset/window.outerHeight)*100);
+
+    return (
+        <div className="Header" style={{"backgroundPositionY": bgPosY+"%"}}>                
+            <NavBar />
+            <div className="logo bottomToTopAnimation"></div>
+            <h3 className="tagline bottomToTopAnimation">{ props.tagline }</h3>
+        </div>
+    )
+}

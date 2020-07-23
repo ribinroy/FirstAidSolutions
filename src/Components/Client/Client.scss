@@ -9,7 +9,7 @@
         }
 
         .clientWrap {
-            background-color: rgba(50,50,50,0.1);
+            background-color: rgba(50,50,50,0.23);
 
             .clientDetails {
                 background-color: rgba(50,50,50,1);
@@ -57,5 +57,15 @@
         max-width: 1280px;
         margin: 0 auto;
         padding: 0px 48px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .Client {
+        .row{
+            width: 100%;
+            text-align: center;
+            padding: 0px 10px;
+        }
     }
 }
