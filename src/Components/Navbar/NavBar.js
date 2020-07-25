@@ -12,11 +12,11 @@ export default function NavBar() {
                 <span></span>
                 <span></span>
             </div>
-            <ul className="listItems" xsvisibile={xsListOpen?"visible":""}>
+            <ul className="listItems" xsvisible={xsListOpen?"visible":""}>
                 <li><Link to={"/Home"}>Home</Link></li>
                 <li>About Us</li>
                 <li>Catalog</li>
-                <li><Link to={"/Client"}>Client</Link></li>
+                <li><Link to={"/Client"}>Clients</Link></li>
                 <li>News</li>
                 <li>Contact</li>
             </ul>

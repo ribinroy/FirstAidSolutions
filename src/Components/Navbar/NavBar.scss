@@ -90,8 +90,25 @@
 
         .listItems{
             display: none;
+
+            &[xsvisible="visible"] {
+                display: block;
+                position: absolute;
+                height: 100vh;
+                background-color: #212121;
+                width: 250px;
+                padding-top: 55px;
+                top: 0px;
+                animation: slideFromLeftToRight .4s 1;
+
+                li {
+                    float: none;
+                    width: 100%;
+                    padding: 10px 40px;
+                }
+            }
         }
-    
+        
         .hamburger{
             display: block !important;
         }
