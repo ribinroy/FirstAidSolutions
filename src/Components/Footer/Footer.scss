@@ -79,5 +79,11 @@
             text-align: center;
             padding: 0px;
         }
+
+        .logo{
+            margin: 0 10px;
+            max-width: calc(100% - 24px);
+            margin-bottom: 10px;
+        }
     }
 }

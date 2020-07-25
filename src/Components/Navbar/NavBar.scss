@@ -2,13 +2,22 @@
     position: fixed;
     top: 0px;
     width: 100%;
-    padding: 20px 0px;
+    padding: 15px 0px;
     display: block;
     z-index: 9999;
     transition: background .4s;
 
     &[scrolleddown="true"]{
         background: #212121;
+
+        ul.listItems{
+            .navLink {
+                &.isActive{
+                    color: #7db6b1 !important;
+                    font-weight: normal;
+                }
+            }
+        }
     }
 
     .hamburger {
@@ -20,6 +29,8 @@
         z-index: 1;
         -webkit-user-select: none;
         user-select: none;
+        transform: scale(0.7);
+        margin-left: 10px;
 
         &.isSelected{
             span {
@@ -76,9 +87,14 @@
             font-size: 16px;
             cursor: pointer;
 
-            a {
-                color: inherit !important;
+            .navLink {
+                color: #fff !important;
                 text-decoration: none !important;
+                transition: all .4s;
+
+                &.isActive{
+                    font-weight: 500;
+                }
             }
         }
     }
@@ -105,6 +121,13 @@
                     float: none;
                     width: 100%;
                     padding: 10px 40px;
+
+                    .navLink {
+                        &.isActive{
+                            color: #7db6b1 !important;
+                            font-weight: normal;
+                        }
+                    }
                 }
             }
         }
